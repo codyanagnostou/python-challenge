@@ -11,6 +11,8 @@ def banking_numbers(pl_data):
     # CSV headers: Date, Profit & Loss
     date = (pl_data[0])
     pandl = (pl_data[1])
+# Read in the CSV file
+with open(banking_csv, 'r') as csvfile:
 
 # Print 
 print(f"----------------------------")
