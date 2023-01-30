@@ -1,10 +1,10 @@
-# Import CSV modules 
+# Import modules 
 
 import os
 import csv
 
 # Path to collect data from the Resources folder
-banking_csv = os.path.join('..', 'Resources', 'budget_data.csv')
+filepath = os.path.join('/Users/codyanagnostou/Desktop/Module-3/python-challenge/PyBank/Resources/budget_data.csv')
 
 #Define function
 def banking_numbers(pl_data):
@@ -12,7 +12,7 @@ def banking_numbers(pl_data):
     date = (pl_data[0])
     pandl = (pl_data[1])
 # Read in the CSV file
-with open(banking_csv, 'r') as csvfile:
+with open(filepath, 'r') as csvfile:
     # Split the data on commas
     csvreader = csv.reader(csvfile, delimiter=',')
 
