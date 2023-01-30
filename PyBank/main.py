@@ -13,6 +13,9 @@ def banking_numbers(pl_data):
     pandl = (pl_data[1])
 # Read in the CSV file
 with open(banking_csv, 'r') as csvfile:
+    # Split the data on commas
+    csvreader = csv.reader(csvfile, delimiter=',')
+
 
 # Print 
 print(f"----------------------------")
