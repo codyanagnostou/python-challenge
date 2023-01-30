@@ -15,6 +15,11 @@ def banking_numbers(pl_data):
 with open(filepath, 'r') as csvfile:
     # Split the data on commas
     csvreader = csv.reader(csvfile, delimiter=',')
+    header = next(csvreader)
+
+# Create Empty lists to store values 
+totalmonths = []
+
 
 
 # Print 
