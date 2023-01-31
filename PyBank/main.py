@@ -24,6 +24,10 @@ with open(budget_csv, encoding='utf-8') as csvfile:
         #Add up total months
         total_months.append(row[0])
 
+        #Find total 
+        total.append(row[1])
+    
+
 # Print 
 print(f"----------------------------")
 print(f"Total Months: {len(total_months)}")
