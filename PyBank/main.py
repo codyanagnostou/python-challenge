@@ -3,24 +3,19 @@
 import os
 import csv
 
-# Path to collect data from the Resources folder
-filepath = os.path.join('/Users/codyanagnostou/Desktop/Module-3/python-challenge/PyBank/Resources/budget_data.csv')
+# Create file path
+csvpath = os.path.join("Resources", "budget_data.csv")
 
 #Define function
-def banking_numbers(pl_data):
+def banking_numbers(row):
     # CSV headers: Date, Profit & Loss
-    date = (pl_data[0])
-    pandl = (pl_data[1])
+    date = (row[0])
+    pandl = (row[1])
 # Read in the CSV file
-with open(filepath, 'r') as csvfile:
+with open(csvpath, 'r') as csvfile:
     # Split the data on commas
     csvreader = csv.reader(csvfile, delimiter=',')
     header = next(csvreader)
-
-# Create Empty lists to store values 
-totalmonths = []
-
-
 
 # Print 
 print(f"----------------------------")
