@@ -1,13 +1,9 @@
 # Import modules 
-
 import os
 import csv
 
 # Create file path
 budget_csv = os.path.join("Resources", "budget_data.csv")
-
-#Create function
-
 
 # Lists to store data
 total_months = []
@@ -23,11 +19,7 @@ with open(budget_csv, encoding='utf-8') as csvfile:
     for row in csvreader:
         #Add up total months
         total_months.append(row[0])
-
-        #Find total 
-        total.append(row[1])
-    
-
+   
 # Print 
 print(f"----------------------------")
 print(f"Total Months: {len(total_months)}")
