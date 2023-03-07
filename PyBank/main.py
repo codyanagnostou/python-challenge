@@ -29,6 +29,7 @@ with open(budget_csv, encoding='utf-8') as csvfile:
     
    
 # Print results
+print(f"Financial Analysis")
 print(f"----------------------------")
 print(f"Total Months: {len(total_months)+1}")
 print(f"Total: ${total}")
@@ -37,6 +38,7 @@ print(f"Greatest Increase in Profits: {max(avg_change)}")
 print(f"Greatest Decrease in Profits: {min(avg_change)}") 
 
 with open("results.txt", "a") as f:
+  print(f"Financial Analysis", file=f)
   print(f"----------------------------", file=f)
   print(f"Total Months: {len(total_months)+1}", file=f)
   print(f"Total: ${total}", file=f)
