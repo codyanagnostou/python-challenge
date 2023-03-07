@@ -37,7 +37,12 @@ print(f"Average Change: {sum(avg_change)/len(avg_change)}")
 print(f"Greatest Increase in Profits: {max(avg_change)}")
 print(f"Greatest Decrease in Profits: {min(avg_change)}") 
 
-with open("results.txt", "a") as f:
+# Specify the file to write to
+output_path = os.path.join("Analysis", "results.txt")
+
+# Open the file using "write" mode. Specify the variable to hold the contents
+
+with open(output_path, 'w') as f:
   print(f"Financial Analysis", file=f)
   print(f"----------------------------", file=f)
   print(f"Total Months: {len(total_months)+1}", file=f)
