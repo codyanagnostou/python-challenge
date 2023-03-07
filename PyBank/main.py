@@ -28,12 +28,18 @@ with open(budget_csv, encoding='utf-8') as csvfile:
         avg_change.append(change)
     
    
-# Print 
+# Print results
 print(f"----------------------------")
 print(f"Total Months: {len(total_months)+1}")
-print(f"Total: {total}")
+print(f"Total: ${total}")
 print(f"Average Change: {sum(avg_change)/len(avg_change)}")
 print(f"Greatest Increase in Profits: {max(avg_change)}")
-print(f"Greatest Decrease in Profits: {min(avg_change)}")
+print(f"Greatest Decrease in Profits: {min(avg_change)}") 
 
-#Index value mix/min list. Use index to print value from list of months
+with open("results.txt", "a") as f:
+  print(f"----------------------------", file=f)
+  print(f"Total Months: {len(total_months)+1}", file=f)
+  print(f"Total: ${total}", file=f)
+  print(f"Average Change: {sum(avg_change)/len(avg_change)}", file=f)
+  print(f"Greatest Increase in Profits: {max(avg_change)}", file=f)
+  print(f"Greatest Decrease in Profits: {min(avg_change)}", file=f) 
